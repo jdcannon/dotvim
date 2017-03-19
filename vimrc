@@ -62,7 +62,7 @@ nnoremap <leader>ll <C-w>l
 :nnoremap <C-K> :resize -10<CR>
 :nnoremap <C-L> :vertical resize +10<CR>
 
-:nnoremap zz za
+:nnoremap <leader>ff za
 
 :vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 :vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
@@ -130,7 +130,7 @@ let g:org_indent = 1
 " Autocommands --{{{--
 augroup filecmds
     autocmd!
-    autocmd BufNewFile * :write
+    " autocmd BufNewFile * :write
     autocmd BufWritePre, BufRead *.html :normal gg=G
     autocmd Filetype vim :setlocal foldmethod=marker
 augroup END
