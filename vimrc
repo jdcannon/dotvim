@@ -54,7 +54,7 @@ nnoremap <leader>ll <C-w>l
 :nnoremap <leader>vs :source $MYVIMRC<CR>
 " Quick save and close
 :nnoremap <leader>w :wq<CR>
-:nnoremap <leader>s :w<CR>
+:nnoremap <leader>s :update<CR>
 :nnoremap <leader>q :q!<CR>
 
 :nnoremap <C-H> :vertical resize -10<CR>
@@ -63,6 +63,10 @@ nnoremap <leader>ll <C-w>l
 :nnoremap <C-L> :vertical resize +10<CR>
 
 :nnoremap <leader>ff za
+:nnoremap <leader>av :vsplit<CR>
+:nnoremap <leader>ah :split<CR>
+:nnoremap ; :
+:nnoremap : ;
 
 :vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 :vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
@@ -79,6 +83,9 @@ nnoremap <leader>ll <C-w>l
 :onoremap { i{
 :onoremap n{ :<c-u>normal! f{vi{<cr>
 :onoremap l{ :<c-u>normal! F}vi{<cr>
+
+"React Bind Function in ES6
+:nnoremap <leader>bs ^vt(y?constructor<cr>f{%Othis.<esc>pa<space>=<space>this.<esc>pa.bind(this);<esc>:nohl<cr>
 
 " Abbreviations
 :iabbrev ssig James Cannon<CR>jdcannon.design<CR>james@jdcannon.design
